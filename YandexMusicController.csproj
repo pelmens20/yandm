@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows10.0.19041.0</TargetFramework>
+    <SupportedOSPlatformVersion>10.0.19041.0</SupportedOSPlatformVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <AssemblyName>YandexMusicController</AssemblyName>
+    <RootNamespace>YandexMusicController</RootNamespace>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <IncludeWindowsSDKRefFrameworkReferences>true</IncludeWindowsSDKRefFrameworkReferences>
+    <DefaultItemExcludes>$(DefaultItemExcludes);tests\**;tests/**</DefaultItemExcludes>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="8.0.11" />
+    <PackageReference Include="Microsoft.Toolkit.Uwp.Notifications" Version="7.1.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="tests\**\*" />
+    <None Remove="tests\**\*" />
+    <Page Remove="tests\**\*" />
+    <EmbeddedResource Remove="tests\**\*" />
+    <Content Remove="tests\**\*" />
+  </ItemGroup>
+</Project>
